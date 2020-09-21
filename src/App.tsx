@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { createClient, Provider } from 'urql'
+import './App.css'
+import PinnedRepos from './components/PinnedRepos'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const client = createClient({
+  url: 'https://api.github.com/graphql',
+  fetchOptions: {
+    headers: { authorization: `Bearer ${process.env.REACT_APP_GH_TOKEN}` }
+  }
+})
+
+const App = () => (
+  <Provider value={client}>
+    <div className='App'>
+      <h1>My Automated Portfolio</h1>
+      <PinnedRepos />
     </div>
-  );
-}
+  </Provider>
+)
 
-export default App;
+export default App
