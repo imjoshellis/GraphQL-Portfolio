@@ -1,3 +1,9 @@
+## Built for Blog
+
+This was built for a blog post. [Read about it on Dev.to](https://dev.to/imjoshellis/how-to-build-an-automated-portfolio-using-github-s-graphql-api-and-react-5bii) or [check out the demo](https://graphql-portfolio.netlify.app)!
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
