@@ -17990,7 +17990,7 @@ export type PinnedReposQuery = (
         { __typename?: 'PinnableItemEdge' }
         & { node?: Maybe<{ __typename?: 'Gist' } | (
           { __typename?: 'Repository' }
-          & Pick<Repository, 'name' | 'description' | 'pushedAt' | 'url' | 'homepageUrl' | 'openGraphImageUrl' | 'usesCustomOpenGraphImage'>
+          & Pick<Repository, 'name' | 'description' | 'pushedAt' | 'url' | 'homepageUrl'>
         )> }
       )>>> }
     ) }
@@ -18010,8 +18010,6 @@ export const PinnedReposDocument = gql`
             pushedAt
             url
             homepageUrl
-            openGraphImageUrl
-            usesCustomOpenGraphImage
           }
         }
       }

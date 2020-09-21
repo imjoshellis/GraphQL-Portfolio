@@ -9,8 +9,6 @@ query PinnedRepos {
             pushedAt
             url
             homepageUrl
-            openGraphImageUrl
-            usesCustomOpenGraphImage
           }
         }
       }
