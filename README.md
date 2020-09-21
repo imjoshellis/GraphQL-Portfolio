@@ -1,4 +1,4 @@
-## Built for Blog
+## Built for a Blog Post
 
 This was built for a blog post. [Read about it on Dev.to](https://dev.to/imjoshellis/how-to-build-an-automated-portfolio-using-github-s-graphql-api-and-react-5bii) or [check out the demo](https://graphql-portfolio.netlify.app)!
 
