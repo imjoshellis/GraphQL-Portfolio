@@ -4,10 +4,7 @@ import './App.css'
 import PinnedRepos from './components/PinnedRepos'
 
 const client = createClient({
-  url: 'https://api.github.com/graphql',
-  fetchOptions: {
-    headers: { authorization: `Bearer ${process.env.REACT_APP_GH_TOKEN}` }
-  }
+  url: '/.netlify/functions/github-graphql'
 })
 
 const App = () => (
