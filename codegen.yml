@@ -1,8 +1,5 @@
 overwrite: true
-schema:
-  - https://api.github.com/graphql:
-      headers:
-        Authorization: 'Bearer ${REACT_APP_GH_TOKEN}'
+schema: 'schema.gql'
 documents: 'src/graphql/**/*.graphql'
 generates:
   src/generated/graphql.tsx:

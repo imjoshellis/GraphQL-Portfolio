@@ -3,9 +3,10 @@ import { usePinnedReposQuery } from '../generated/graphql'
 
 export const PinnedRepos: React.FC = () => {
   const [{ data }] = usePinnedReposQuery()
+  console.log(data)
   return (
     <>
-      {data?.viewer.pinnedItems.edges ? (
+      {data?.pinnedRepos ? (
         <div
           style={{
             display: 'flex',
@@ -14,15 +15,15 @@ export const PinnedRepos: React.FC = () => {
             textAlign: 'left'
           }}
         >
-          {data.viewer.pinnedItems.edges.map((node, index) => {
-            if (node && node.node) {
+          {data.pinnedRepos.map((repo, index) => {
+            if (repo) {
               const { name, description, url, homepageUrl, pushedAt } = {
                 name: '',
                 description: '',
                 url: '',
                 homepageUrl: '',
                 pushedAt: '',
-                ...node.node
+                ...repo
               }
               return (
                 <div
@@ -35,7 +36,7 @@ export const PinnedRepos: React.FC = () => {
                   <p style={{ marginTop: 0 }}>
                     {description ? description : 'no description'}
                   </p>
-                  <a href={url}>View on GitHub</a>
+                  {url ? <a href={url}>View on GitHub</a> : null}
                   {homepageUrl ? (
                     <a href={homepageUrl} style={{ marginLeft: '1rem' }}>
                       View website
