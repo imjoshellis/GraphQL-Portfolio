@@ -12,7 +12,6 @@
   "dependencies": {
     "apollo-server-lambda": "^2.18.1",
     "axios": "^0.20.0",
-    "dotenv": "^8.2.0",
     "graphql": "^15.3.0"
   },
   "devDependencies": {
